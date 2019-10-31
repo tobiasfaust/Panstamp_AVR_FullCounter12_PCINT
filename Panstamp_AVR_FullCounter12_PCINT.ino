@@ -81,6 +81,50 @@
 
 unsigned long counter[] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};                             // Initial counter values
 unsigned int  transmissions = 0;  
+
+void Prg_Cnt0(void) {counter[0]++;}
+void Prg_Cnt1(void) {counter[1]++;}
+void Prg_Cnt2(void) {counter[2]++;}
+void Prg_Cnt3(void) {counter[3]++;}
+void Prg_Cnt4(void) {counter[4]++;}
+void Prg_Cnt5(void) {counter[5]++;}
+void Prg_Cnt6(void) {counter[6]++;}
+void Prg_Cnt7(void) {counter[7]++;}
+void Prg_Cnt8(void) {counter[8]++;}
+void Prg_Cnt9(void) {counter[9]++;}
+void Prg_Cnt10(void) {counter[10]++;}
+void Prg_Cnt11(void) {counter[11]++;}
+
+void pcEnableInterrupt() {
+  enablePCINT(digitalPinToPCINT(Counter0)); 
+  enablePCINT(digitalPinToPCINT(Counter1)); 
+  enablePCINT(digitalPinToPCINT(Counter2)); 
+  enablePCINT(digitalPinToPCINT(Counter3)); 
+  enablePCINT(digitalPinToPCINT(Counter4)); 
+  enablePCINT(digitalPinToPCINT(Counter5)); 
+  enablePCINT(digitalPinToPCINT(Counter6)); 
+  enablePCINT(digitalPinToPCINT(Counter7)); 
+  enablePCINT(digitalPinToPCINT(Counter8)); 
+  enablePCINT(digitalPinToPCINT(Counter9)); 
+  enablePCINT(digitalPinToPCINT(Counter10)); 
+  enablePCINT(digitalPinToPCINT(Counter11)); 
+}
+
+void pcDisableInterrupt() {
+  disablePCINT(digitalPinToPCINT(Counter0)); 
+  disablePCINT(digitalPinToPCINT(Counter1)); 
+  disablePCINT(digitalPinToPCINT(Counter2)); 
+  disablePCINT(digitalPinToPCINT(Counter3)); 
+  disablePCINT(digitalPinToPCINT(Counter4)); 
+  disablePCINT(digitalPinToPCINT(Counter5)); 
+  disablePCINT(digitalPinToPCINT(Counter6)); 
+  disablePCINT(digitalPinToPCINT(Counter7)); 
+  disablePCINT(digitalPinToPCINT(Counter8)); 
+  disablePCINT(digitalPinToPCINT(Counter9)); 
+  disablePCINT(digitalPinToPCINT(Counter10)); 
+  disablePCINT(digitalPinToPCINT(Counter11)); 
+}
+
 /**
  * setup
  *
@@ -150,49 +194,6 @@ void setup()
   // Switch to Rx OFF state
   swap.enterSystemState(SYSTATE_RXOFF);
 
-}
-
-void Prg_Cnt0(void) {counter[0]++;}
-void Prg_Cnt1(void) {counter[1]++;}
-void Prg_Cnt2(void) {counter[2]++;}
-void Prg_Cnt3(void) {counter[3]++;}
-void Prg_Cnt4(void) {counter[4]++;}
-void Prg_Cnt5(void) {counter[5]++;}
-void Prg_Cnt6(void) {counter[6]++;}
-void Prg_Cnt7(void) {counter[7]++;}
-void Prg_Cnt8(void) {counter[8]++;}
-void Prg_Cnt9(void) {counter[9]++;}
-void Prg_Cnt10(void) {counter[10]++;}
-void Prg_Cnt11(void) {counter[11]++;}
-
-void pcEnableInterrupt() {
-  enablePCINT(digitalPinToPCINT(Counter0)); 
-  enablePCINT(digitalPinToPCINT(Counter1)); 
-  enablePCINT(digitalPinToPCINT(Counter2)); 
-  enablePCINT(digitalPinToPCINT(Counter3)); 
-  enablePCINT(digitalPinToPCINT(Counter4)); 
-  enablePCINT(digitalPinToPCINT(Counter5)); 
-  enablePCINT(digitalPinToPCINT(Counter6)); 
-  enablePCINT(digitalPinToPCINT(Counter7)); 
-  enablePCINT(digitalPinToPCINT(Counter8)); 
-  enablePCINT(digitalPinToPCINT(Counter9)); 
-  enablePCINT(digitalPinToPCINT(Counter10)); 
-  enablePCINT(digitalPinToPCINT(Counter11)); 
-}
-
-void pcDisableInterrupt() {
-  disablePCINT(digitalPinToPCINT(Counter0)); 
-  disablePCINT(digitalPinToPCINT(Counter1)); 
-  disablePCINT(digitalPinToPCINT(Counter2)); 
-  disablePCINT(digitalPinToPCINT(Counter3)); 
-  disablePCINT(digitalPinToPCINT(Counter4)); 
-  disablePCINT(digitalPinToPCINT(Counter5)); 
-  disablePCINT(digitalPinToPCINT(Counter6)); 
-  disablePCINT(digitalPinToPCINT(Counter7)); 
-  disablePCINT(digitalPinToPCINT(Counter8)); 
-  disablePCINT(digitalPinToPCINT(Counter9)); 
-  disablePCINT(digitalPinToPCINT(Counter10)); 
-  disablePCINT(digitalPinToPCINT(Counter11)); 
 }
 
 /**

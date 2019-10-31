@@ -31,6 +31,9 @@
 #include "register.h"
 #include "commonregs.h"
 
+const void updtVoltSupply(byte rId);
+const void updtCounters(byte rId);
+
 /**
  * Register indexes
  */
